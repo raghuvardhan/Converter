@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Unit Converter</h1>
+        <div class="tabs">
+            <button class="tab active" onclick="openTab(event, 'length')">Length</button>
+            <button class="tab" onclick="openTab(event, 'weight')">Weight</button>
+            <button class="tab" onclick="openTab(event, 'temperature')">Temperature</button>
+        </div>
+
+        <div id="length" class="tab-content active">
+            <h2>Length Conversion</h2>
+            <input type="number" id="lengthInput" placeholder="Enter value" oninput="convertLength()">
+            <select id="lengthUnit" onchange="convertLength()">
+                <option value="meters">Meters</option>
+                <option value="feet">Feet</option>
+            </select>
+            <p id="lengthResult"></p>
+        </div>
+
+        <div id="weight" class="tab-content">
+            <h2>Weight Conversion</h2>
+            <input type="number" id="weightInput" placeholder="Enter value" oninput="convertWeight()">
+            <select id="weightUnit" onchange="convertWeight()">
+                <option value="kilograms">Kilograms</option>
+                <option value="pounds">Pounds</option>
+            </select>
+            <p id="weightResult"></p>
+        </div>
+
+        <div id="temperature" class="tab-content">
+            <h2>Temperature Conversion</h2>
+            <input type="number" id="temperatureInput" placeholder="Enter value" oninput="convertTemperature()">
+            <select id="temperatureUnit" onchange="convertTemperature()">
+                <option value="celsius">Celsius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+            </select>
+            <p id="temperatureResult"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
